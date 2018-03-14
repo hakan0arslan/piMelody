@@ -14,7 +14,7 @@ public class Player{
     public void playSound(String note) {
         try {
             final String dir = System.getProperty("user.dir");
-            InputStream inputStream = new FileInputStream(dir + separator + note);
+            InputStream inputStream = new FileInputStream(dir + separator + "sounds" +separator + note);
             AudioStream audioStream = new AudioStream(inputStream);
             AudioPlayer.player.start(audioStream);
             AudioPlayer.sleep(314);
